@@ -20,7 +20,8 @@ void packArray8Byte(uint8_t *input, uint8_t *output);
  */
 void unpackArray7Byte(uint8_t *input, uint8_t *output);
 
-
+void packArray(uint8_t *input, uint16_t len, uint8_t *output);
+void unpackArray(uint8_t *input, uint16_t len, uint8_t *output);
 
 
 #endif

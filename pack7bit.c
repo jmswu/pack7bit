@@ -68,3 +68,32 @@ uint8_t extractFromLSB(uint8_t input, uint8_t num){
     uint8_t mask = 0xFF;
     return input & (~(mask << num));
 }
+
+
+void packArray(uint8_t *input, uint16_t len, uint8_t *output){
+
+    /* null pointer check */
+    if (input == NULL) return;
+    if (output == NULL) return; 
+
+    const uint8_t NUM_OF_BYTE = 8;
+
+    uint8_t tmp[NUM_OF_BYTE] = {0};
+    uint16_t numOfBlock = 0;
+    uint8_t padding = 0;
+
+    if ((len % NUM_OF_BYTE) == 0 ) 
+        numOfBlock = len / NUM_OF_BYTE;
+    else
+    {
+        numOfBlock = (len / NUM_OF_BYTE) + 1;
+        padding = NUM_OF_BYTE - (len % NUM_OF_BYTE);
+    }
+        
+
+    printf("num of block: %d, padding: %d\n", numOfBlock, padding);
+
+    /* nothing to do */
+    if (numOfBlock == 0) return;
+
+}

@@ -24,6 +24,14 @@ int main(int argc, char **argv){
     /* compare the origional hex code to the packed then unpacked data */
     printf("%s\n", memcmp(hex_code, unpacked_data, strlen((char *)hex_code)) == 0 ? "Match!" : "Not match!");
 
+    for (size_t i = 0; i < 20; i++)
+    {
+        printf("len = %03d, ", i);
+        packArray(hex_code, i, packed_data);
+    }
+    
+    
+
     return 0;
 }
 
