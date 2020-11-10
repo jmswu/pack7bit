@@ -16,14 +16,14 @@ uint8_t packOneByte(uint8_t first, uint8_t second, uint8_t index);
 uint8_t extractFromMSB(uint8_t input, uint8_t num);
 uint8_t extractFromLSB(uint8_t input, uint8_t num);
 
-void packArray(uint8_t *input, uint8_t *output){
+void packArray8Byte(uint8_t *input, uint8_t *output){
     for (size_t i = 0; i < 7; i++)
     {
         output[i] = packOneByte(input[i], input[i+1], i);
     }
 }
 
-void unpackArray(uint8_t *input, uint8_t *output){
+void unpackArray7Byte(uint8_t *input, uint8_t *output){
 
     for (size_t i = 0; i < 8; i++)
     {

@@ -12,13 +12,13 @@
  * \param   uint8_t *input  - 7-bit coded input, must be 8 bytes long
  * \param   uint8_t *output - 8-bit coded output, must be 7 bytes long
  */
-void packArray(uint8_t *input, uint8_t *output);
+void packArray8Byte(uint8_t *input, uint8_t *output);
 
 /* \brief   Unpack 8-bit data array into 7-bit data array
  * \param   uint8_t *input  - 8-bit coded input, must be 7 bytes long
  * \param   uint8_t *output - 7-bit coded output, must be 8 bytes long
  */
-void unpackArray(uint8_t *input, uint8_t *output);
+void unpackArray7Byte(uint8_t *input, uint8_t *output);
 
 
 
